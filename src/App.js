@@ -4,17 +4,17 @@ import './App.scss';
 
 class App extends Component {
   render() {
-    const itemList = [
-      'Apple',
-      'Orange',
-      'Banana',
-      'Strawberry',
-      'Pear',
-      'Plum',
-      'Kumquat',
-      'Mango',
-      'Watermelon'
-    ]
+    // const itemList = [
+    //   'Apple',
+    //   'Orange',
+    //   'Banana',
+    //   'Strawberry',
+    //   'Pear',
+    //   'Plum',
+    //   'Kumquat',
+    //   'Mango',
+    //   'Watermelon'
+    // ]
     return (
       <div className="App">
         <header>
@@ -22,11 +22,7 @@ class App extends Component {
         </header>
         <div className="component-list">
           {/* <Button href="#" theme='go'> Button </Button> */}
-          <ListCard 
-            header="Fruit"
-            items={itemList}
-            theme="dark"
-          />
+          <ListCard />
         </div>
       </div>
     );
