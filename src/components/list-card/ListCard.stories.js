@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, array, radios } from '@storybook/addon-knobs';
+import { withKnobs, radios } from '@storybook/addon-knobs';
 
 import { ListCard } from '../../components';
 
