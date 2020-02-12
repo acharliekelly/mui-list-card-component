@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, array, radios, text } from '@storybook/addon-knobs';
+import { withKnobs, radios, text, optionsKnob as options } from '@storybook/addon-knobs';
 
 import { ListCard } from '../../components';
 
@@ -17,22 +17,30 @@ stories
     return <ListCard header="Header with Items" items={items}></ListCard>
   })
   .add('dynamic header', () => {
-    const header = text('Header', 'text');
+    const header = text('Header', 'Header Text');
     return <ListCard header={header} />
   })
   .add('dynamic items', () => {
-    const itemList = array('Fruits', [
-      'Apple',
-      'Orange',
-      'Banana',
-      'Strawberry',
-      'Pear',
-      'Plum',
-      'Kumquat',
-      'Mango',
-      'Watermelon'
-    ]);
-    return <ListCard header="Dynamic List" items={itemList} theme="dark" />
+    const selectedFruit = ['Apple','Orange','Banana','Pear'];
+    const allFruits = {
+      Apple: 'Apple',
+      Orange: 'Orange',
+      Banana: 'Banana',
+      Strawberry: 'Strawberry',
+      Pear: 'Pear',
+      Kumquat: 'Kumquat',
+      Mango: 'Mango',
+      Watermelon: 'Watermelon',
+      Pomelo: 'Pomelo',
+      Tangerine: 'Tangerine',
+      Blueberry: 'Blueberry',
+      Grape: 'Grape',
+      Lemon: 'Lemon',
+    }
+    const fruitOptions = options('Fruit', allFruits, selectedFruit, { 
+      display: 'check' 
+    })
+    return <ListCard header="Dynamic List" items={fruitOptions} theme="dark" />
   })
   .add('change theme', () => {
     const themes = {
