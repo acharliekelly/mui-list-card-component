@@ -25,6 +25,6 @@ Open [http://localhost:9009](http://localhost:9009) to view it in the browser.
 
 # Solution
 
-I met the MVP and bonus goals, and also added some extra stories with Knobs, because they're fun. My solution uses a mix of SASS and MUI customization that I'm not thrilled with, but it works.
+I met the MVP and bonus goals, and also added some extra stories with Knobs, because they're fun. My solution uses a mix of SASS and MUI customization that probably ought to be more consistent, but it works.
 
-Also, there was no way to make my ListCard appear next to the existing Button component on the main app page without looking stupid, so I hid the Button. Hope you don't mind.
+Also, I couldn't fina a way to make my ListCard appear next to the existing Button component on the main app page in an attractive manner, so I hid the Button. Hope you don't mind.
