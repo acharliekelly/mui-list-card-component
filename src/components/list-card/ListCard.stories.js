@@ -10,17 +10,25 @@ const stories = storiesOf('ListCard', module);
 stories.addDecorator(withKnobs);
 
 stories
-  .add('default', () => <ListCard />)
-  .add('header text', () => <ListCard header="Custom Header"></ListCard>)
-  .add('list items', () => {
+  .add('#1. Default', () => <ListCard />)
+  .add('#2. Header Text', () => <ListCard header="Custom Header"></ListCard>)
+  .add('#3. List Items', () => {
     const items = ['Custom Item', 'Second Item', 'Another Item'];
     return <ListCard header="Header with Items" items={items}></ListCard>
   })
-  .add('dynamic header', () => {
+  .add('#4. Change Theme [bonus]', () => {
+    const themes = {
+      Light: 'light',
+      Dark: 'dark'
+    }
+    const theme = radios('Themes', themes, 'light');
+    return <ListCard theme={theme} />
+  })
+  .add('#5. Dynamic Header [extra]', () => {
     const header = text('Header', 'Header Text');
     return <ListCard header={header} />
   })
-  .add('dynamic items', () => {
+  .add('#6. Dynamic Items [extra]', () => {
     const selectedFruit = ['Apple','Orange','Banana','Pear'];
     const allFruits = {
       Apple: 'Apple',
@@ -42,11 +50,4 @@ stories
     })
     return <ListCard header="Dynamic List" items={fruitOptions} theme="dark" />
   })
-  .add('change theme', () => {
-    const themes = {
-      Light: 'light',
-      Dark: 'dark'
-    }
-    const theme = radios('Themes', themes, 'light');
-    return <ListCard theme={theme} />
-  })
+  
