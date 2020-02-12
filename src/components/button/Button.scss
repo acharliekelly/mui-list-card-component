@@ -1,0 +1,24 @@
+$white: #FBFBF8;
+$red: #F30F24;
+$green: #43F30F;
+$yellow: #F3F30F;
+$black: #090900;
+
+.ui-button {
+  box-shadow: 5px 10px $black;
+  &.red {
+    background-color: $red;
+    color: $white;
+  }
+  &.green {
+    background-color: $green;
+    color: $white;
+  }
+  &.yellow {
+    background-color: $yellow;
+    color: $black;
+  }
+  &.default {
+    color: $black;
+  }
+}

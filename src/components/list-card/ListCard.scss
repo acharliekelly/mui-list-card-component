@@ -1,0 +1,72 @@
+
+$lightContentBackground: #fff;
+$lightHeaderBackground: #e8e8e8;
+$lightTextColor: #0c0c0c;
+$lightBorderColor: #000;
+
+$darkContentBackground: #c2c2c2;
+$darkHeaderBackground: #727272;
+$darkTextColor: #fff;
+$darkBorderColor: #fff;
+
+
+
+.ui-card {
+  width: 328px;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+
+
+  .content {
+    width: 100%;
+    min-height: 320px;
+    padding: 20px;
+    text-align: left;
+
+    .item {
+      padding-bottom: 10px;
+      font-size: 24px;
+      line-height: 20px;
+      overflow-wrap: normal;
+    }
+  }
+
+  &.light {
+    border-color: $lightBorderColor;
+    box-shadow: 4px 5px 4px $lightBorderColor;
+    color: $lightTextColor;
+
+    .header {
+      background-color: $lightHeaderBackground;
+      div span {
+        color: $lightTextColor;
+      }
+    }
+    .content {
+      background-color: $lightContentBackground;
+      .item {
+        color: $lightTextColor;
+      }
+    }
+  }
+
+  &.dark {
+    border-color: $darkBorderColor;
+    box-shadow: 4px 5px 4px $darkBorderColor;
+    color: $darkTextColor;
+
+    .header {
+      background-color: $darkHeaderBackground;
+      div span {
+        color: $darkTextColor;
+      }
+    }
+    .content {
+      background-color: $darkContentBackground;
+      .item {
+        color: $darkTextColor;
+      }
+    }
+  }
+}
