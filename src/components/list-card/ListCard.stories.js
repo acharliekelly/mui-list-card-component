@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, radios } from '@storybook/addon-knobs';
+import { withKnobs, array, radios, text } from '@storybook/addon-knobs';
 
 import { ListCard } from '../../components';
 
@@ -16,6 +16,24 @@ stories
     const items = ['Custom Item', 'Second Item', 'Another Item'];
     return <ListCard header="Header with Items" items={items}></ListCard>
   })
+  .add('dynamic header', () => {
+    const header = text('Header', 'text');
+    return <ListCard header={header} />
+  })
+  .add('dynamic items', () => {
+    const itemList = array('Fruits', [
+      'Apple',
+      'Orange',
+      'Banana',
+      'Strawberry',
+      'Pear',
+      'Plum',
+      'Kumquat',
+      'Mango',
+      'Watermelon'
+    ]);
+    return <ListCard header="Dynamic List" items={itemList} theme="dark" />
+  })
   .add('change theme', () => {
     const themes = {
       Light: 'light',
@@ -24,7 +42,3 @@ stories
     const theme = radios('Themes', themes, 'light');
     return <ListCard theme={theme} />
   })
-  // .add('change items', () => {
-  //   const itemList = array('Items', ['Apple', 'Banana', 'Peach', 'Plum', 'Pear']);
-  //   return <ListCard header="Dynamic List" items={itemList} theme="dark" />
-  // })

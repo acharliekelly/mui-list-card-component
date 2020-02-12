@@ -4,17 +4,6 @@ import './App.scss';
 
 class App extends Component {
   render() {
-    // const itemList = [
-    //   'Apple',
-    //   'Orange',
-    //   'Banana',
-    //   'Strawberry',
-    //   'Pear',
-    //   'Plum',
-    //   'Kumquat',
-    //   'Mango',
-    //   'Watermelon'
-    // ]
     return (
       <div className="App">
         <header>
